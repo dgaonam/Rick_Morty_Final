@@ -10,10 +10,12 @@ import {
 import Personajes from './Components/Personajes/Personajes';
 import PersonajesContext from './Components/context/PersonajesContext';
 import EpisodesContext from './Components/context/EpisodesContext';
+import LocacionesContext from './Components/context/LocacionesContext';
 import Error from './Components/Error/Error';
 import Episodios from './Components/Episodios/Episodios';
 import Episodio from './Components/Episodios/Episodio';
 import Locaciones from './Components/Locaciones/Locaciones';
+import Locacion from './Components/Locaciones/Locacion';
 import Personaje from './Components/Personajes/Personaje';
 
 const data = {
@@ -22,6 +24,10 @@ const data = {
 
 const dataEpisode = {
   episode:{}
+ };
+
+ const dataLocaciones = {
+  locacion:{}
  };
 
 const router = createBrowserRouter([
@@ -44,7 +50,10 @@ const router = createBrowserRouter([
     element: <EpisodesContext.Provider value={dataEpisode}><Episodio/></EpisodesContext.Provider>,
   },{
     path: "/Locaciones",
-    element: <Locaciones/>,
+    element: <LocacionesContext.Provider value={dataLocaciones}><Locaciones/></LocacionesContext.Provider>,
+  },{
+    path: "/Locacion/:id",
+    element: <LocacionesContext.Provider value={dataLocaciones}><Locacion/></LocacionesContext.Provider>,
   },
 ]);
 

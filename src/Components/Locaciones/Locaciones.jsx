@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import Character from '../Cards/Character';
+import LocacionesCard from '../Cards/LocacionesCard';
 
 const Locaciones = () => {
     const [locaciones, setLocaciones] = useState([]);
@@ -119,7 +119,7 @@ const Locaciones = () => {
                     {locaciones.map((locacion) => {
                         return (
                             <>
-                                <Character url={"/Location/"} name={locacion.name} image={locacion.image}  />
+                                <LocacionesCard url={"/Locacion/"} id={locacion.id} name={locacion.name} dimension={locacion.dimension} type={locacion.type} residents={locacion.residents} />
                             </>
                         );
                     })}

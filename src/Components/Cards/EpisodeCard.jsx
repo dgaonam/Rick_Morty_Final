@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import useEpisodes from "../hooks/useEpisodes";
-const EpisodeCard = ({name,air_date,id,characters,episode,url}) => {
+const LocacionCard = ({name,air_date,id,characters,episode,url}) => {
     const episodes= useEpisodes();
     return (
         <>
@@ -15,4 +15,4 @@ const EpisodeCard = ({name,air_date,id,characters,episode,url}) => {
     );
 }
 
-export default EpisodeCard;
+export default LocacionCard;

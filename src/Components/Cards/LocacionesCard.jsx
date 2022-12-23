@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 import useLocaciones from "../hooks/useLocaciones";
-const Character = ({name,image,id,status,episode,gender,url}) => {
+const LocacionCard = ({name,dimension,id,type,residents,url}) => {
     const locaciones= useLocaciones();
     return (
         <>
             <div key={"personaje_" + name} className="card col-md-3" >
-                <Link to={url+id} onClick={()=>{personaje.character={name:name,image:image,episodes:episode,status:status,gender:gender}}}>
-                    <img key={"personaje_img_" + name} src={image} />
+                <Link to={url+id} onClick={()=>{locaciones.locacion={name:name,dimension:dimension,residents:residents,type:type}}}>
                     <div key={"personaje_body_  " + name} className="card-body">
                         <h5 >{name}</h5>
                     </div>
@@ -17,4 +16,4 @@ const Character = ({name,image,id,status,episode,gender,url}) => {
     );
 }
 
-export default Character;
+export default LocacionCard;
