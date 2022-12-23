@@ -15,6 +15,11 @@ const Locacion = () => {
         <>
             <Header />
             <Link to={"/Locaciones"}><button type="button" className="btn btn-primary btn-lg">Regresar</button></Link>
+            <div className="col-md col-12 md:col-4">
+                    <div className="form-floating " style={{ textAlign: 'center' }}>
+                        <h1>Locacion</h1>
+                    </div>
+                </div>
             <div style={{ paddingTop: "1rem" }} className="g7 col-md-12">
                 <div className="row g-2">
                     <div key={"personaje_" + Locacion.locacion.name} className="card col-md-3" >

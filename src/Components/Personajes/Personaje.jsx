@@ -15,6 +15,11 @@ const Personaje = () => {
         <>
             <Header />
             <Link to={"/Personajes"}><button type="button" className="btn btn-primary btn-lg">Regresar</button></Link>
+            <div className="col-md col-12 md:col-4">
+                    <div className="form-floating " style={{ textAlign: 'center' }}>
+                        <h1>Personaje</h1>
+                    </div>
+                </div>
             <div style={{ paddingTop: "1rem" }} className="g7 col-md-12">
                 <div className="row g-2">
                     <div key={"personaje_" + personaje.character.name} className="card col-md-3" >

@@ -15,8 +15,8 @@ services:
     environment:
       - CHOKIDAR_USEPOLLING=true
     networks:
-      - pokemon-network
+      - proyecto_final-network
 
 networks:
-  pokemon-network:
+  proyecto_final-network:
     external: true
