@@ -1,17 +1,14 @@
 version: '3.3'
 services:
-  calculadora:
+  Proyecto_final:
     container_name: Proyecto_final
     image: node:16
     build:
       context: ./
     volumes:
-      - ./:/frontend
-    working_dir: /frontend
+      - ./:/app
     ports:
       - 3000:3000
-    stdin_open: true
-    command: npm start
     environment:
       - CHOKIDAR_USEPOLLING=true
     networks:
