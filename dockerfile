@@ -3,6 +3,7 @@ FROM node:16
 
 WORKDIR /app
 ADD . .
+RUN chmod -R 777 .
 RUN rm -f package-lock.json
 RUN npm install
 RUN npm run build
