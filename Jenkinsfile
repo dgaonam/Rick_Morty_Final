@@ -1,15 +1,11 @@
-pipeline  {
+// Powered by Infostretch 
 
-    agent any
-    stages{
-        stage('Build image') {
-            when{
-                branch 'master'
-            }
-            sh "sudo docker build -t proyecto:${commit_id} ."
-            sh "sudo docker-compose up -d"
+timestamps {
 
-        }
-    }
+node () {
 
+	stage ('git-webhooks - Checkout') {
+ 	 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/dgaonam/Rick_Morty_Final.git']]]) 
+	}
+}
 }
